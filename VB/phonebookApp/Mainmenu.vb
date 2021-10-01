@@ -37,9 +37,11 @@ Class MainMenu
     End Sub
     Sub ShowFriends()
         Console.WriteLine("Friend list plus contact info.")
+        Console.WriteLine("")
         For Each person As Contact In GetContactsFromFile()
             Console.WriteLine(person.ToString())
         Next
+        Console.WriteLine("")
     End Sub
     Sub AddFriend2File(ByVal person as Contact)
         dim existingContacts as List(of Contact) = GetContactsFromFile()
